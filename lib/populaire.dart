@@ -20,7 +20,7 @@ class Popular extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage("https://images.unsplash.com/photo-1533630336171-85a2cde85463?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+                    image: NetworkImage("https://4.bp.blogspot.com/-A2mn5pPuMOg/WvCV-Cl7p9I/AAAAAAAAAHI/OvqzHNF_ysMTGCQwVL2xz7iQ5RtmBTSWQCLcBGAs/s1600/FB_IMG_15254740627486899.jpg",
                     )
                 ),
               ),
@@ -44,7 +44,7 @@ class Popular extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Expanded(child: Text("Pizza Margueritte", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),)),
+                          Expanded(child: Text("FLAVORED RUM", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),)),
                           SizedBox(width: 5,),
                           Text("Ar8000", style: TextStyle(fontSize: 14, color: Colors.orange, fontWeight: FontWeight.w600),),
                         ],

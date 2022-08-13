@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List categories = [
   {
-    "name" : "Salad",
-    "icon" : FontAwesomeIcons.cloudMeatball
+    "name" : "Flavoured RUM",
   },
   {
-    "name" : "Burger",
-    "icon" :  FontAwesomeIcons.hamburger
+    "name" : "Pur jus de canne",
   },
   {
-    "name" : "Drink",
-    "icon" : FontAwesomeIcons.wineGlass
-  },
-  {
-    "name" : "Soup",
-    "icon" :  Icons.rice_bowl
-  },
-  {
-    "name" : "Snack",
-    "icon" : FontAwesomeIcons.cookie
+    "name" : "Exotic RUM",
   },
 ];

@@ -40,7 +40,7 @@ class _SearchBarState extends State<SearchBar> {
                     prefixIcon: Icon(
                       Icons.search_outlined, color: Colors.black12.withOpacity(.6),
                     ),
-                    hintText: 'Search any recipe...',
+                    hintText: 'Search any rum...',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(90),
                         borderSide: BorderSide.none),

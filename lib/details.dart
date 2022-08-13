@@ -30,7 +30,7 @@ class details extends StatelessWidget {
             borderRadius: BorderRadius.circular(10), // Image border
             child: SizedBox.fromSize(
               size: Size.fromRadius(35), // Image radius
-              child: Image.network('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
+              child: Image.network('https://scontent.ftnr4-1.fna.fbcdn.net/v/t39.30808-6/253693110_3062379954006882_5114606571690218224_n.jpg?stp=dst-jpg_p526x296&_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeGx7XCXJ-Fd0uvKeNV-GaAxgNF6pqtxOx6A0Xqmq3E7Hvyuue61CKeI1fJMa47E3lrAFQCgK95MGCSOQ5SYXFGX&_nc_ohc=S9nsGowzeMAAX9AqOwi&_nc_zt=23&_nc_ht=scontent.ftnr4-1.fna&oh=00_AT-qJpm6O3xw_Jg3toNKe7YQimYGfxNrCcNwTGYmN3Se8w&oe=62EE7229',
                   height: 60,
                   width: 60,
                   fit: BoxFit.cover),
@@ -43,9 +43,9 @@ class details extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("Margueritte",  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                Text("Pur jus de canne - SAUVAGE",  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
                 SizedBox(height: 5,),
-                Text("à base tongolo", maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey)),
+                Text("55%ALC/VOL", maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey)),
                 SizedBox(height: 15,),
                 Row(children: [
                   Icon(Icons.star_rounded, size: 14, color: Colors.orange,),

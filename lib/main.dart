@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kaly/app_bar.dart';
+import 'package:kaly/data.dart';
 import 'package:kaly/menu.dart';
 import 'package:kaly/populaire.dart';
 import 'package:kaly/search_bar.dart';
@@ -43,6 +44,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,16 +71,18 @@ getBody() {
             margin: EdgeInsets.only(left: 15, right: 15),
             child: RichText(
               text: TextSpan(
-                  text: 'Find your own',
+                  text: 'But why is the',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,color:Color(0xFF000000)
                   ),
                   children: const <TextSpan>[
                     TextSpan(
-                        text: ' Meals',
+                        text: ' RUM ',
                         style: TextStyle(color:Color(0xffF4991A)
                         )),
+                    TextSpan(
+                        text: ' gone ?',),
                   ]
               ),
             ),
@@ -92,14 +96,15 @@ getBody() {
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",)
+                    image: NetworkImage("https://www.dedanu.com/wp-content/uploads/2020/03/rhum-300x200.jpg",)
                 )
             ),
           ),
           SizedBox(height: 25,),
           Container(
-              margin: EdgeInsets.only(left: 0),
-              child: LesCategory()),
+            child: listCategories()
+          ),
+
           SizedBox(height: 10,),
           Container(
             margin: EdgeInsets.only(left: 15, right: 15),
@@ -127,8 +132,28 @@ getBody() {
         ]
       )
   );
-  }
 }
+
+  listCategories() {
+    List<Widget> lists = List.generate(categories.length, (index) => Category(data: categories[index]));
+    lists.insert(0, Category(
+      data: {
+        "name" : "Tous nos produits"
+      },
+      seleted: true,)
+    );
+    return
+      SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.only(bottom: 5, left: 15),
+        child: Row(
+            children: lists
+        ),
+      );
+  }
+
+  }
+
 
 
 
