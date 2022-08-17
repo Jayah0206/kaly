@@ -1,13 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kaly/app_bar.dart';
-import 'package:kaly/data.dart';
-import 'package:kaly/menu.dart';
-import 'package:kaly/populaire.dart';
-import 'package:kaly/search_bar.dart';
-import 'details.dart';
-import 'les_categories.dart';
+import 'package:kaly/widgets/app_bar.dart';
+import 'package:kaly/data/data.dart';
+import 'package:kaly/widgets/menu.dart';
+import 'package:kaly/widgets/populaire.dart';
+import 'package:kaly/widgets/search_bar.dart';
+import 'widgets/feature_item.dart';
+import 'widgets/les_categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -116,7 +116,10 @@ getBody() {
               ],
             ),
           ),
-          Popular(),
+          Container(
+            padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+            child: listPopulars(),
+          ),
           SizedBox(height: 20,),
           Container(
             margin: EdgeInsets.only(left: 15, right: 15),
@@ -125,10 +128,9 @@ getBody() {
           SizedBox(height: 10,),
           Container(
             margin: EdgeInsets.only(left: 15, right: 15),
-            child: details(),
+            child: listFeatured(),
           ),
           SizedBox(height: 20,),
-          details(),
         ]
       )
   );
@@ -150,9 +152,29 @@ getBody() {
             children: lists
         ),
       );
+   }
+
+  listPopulars(){
+    return
+      SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.only(left: 15),
+        child: Row(
+          children: List.generate(populars.length, (index) => PopularItem(data: populars[index])
+          ),
+        ),
+      );
+  }
+  listFeatured(){
+    return
+      Column(
+        children: List.generate(featured.length,
+                (index) => FeaturedItem(data: featured[index])
+        ),
+      );
+  }
   }
 
-  }
 
 
 
