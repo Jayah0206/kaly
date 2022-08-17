@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:kaly/favory.dart';
+import 'package:kaly/widgets/favory.dart';
 
 class details extends StatelessWidget {
   const details({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class details extends StatelessWidget {
             borderRadius: BorderRadius.circular(10), // Image border
             child: SizedBox.fromSize(
               size: Size.fromRadius(35), // Image radius
-              child: Image.network('https://scontent.ftnr4-1.fna.fbcdn.net/v/t39.30808-6/253693110_3062379954006882_5114606571690218224_n.jpg?stp=dst-jpg_p526x296&_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeGx7XCXJ-Fd0uvKeNV-GaAxgNF6pqtxOx6A0Xqmq3E7Hvyuue61CKeI1fJMa47E3lrAFQCgK95MGCSOQ5SYXFGX&_nc_ohc=S9nsGowzeMAAX9AqOwi&_nc_zt=23&_nc_ht=scontent.ftnr4-1.fna&oh=00_AT-qJpm6O3xw_Jg3toNKe7YQimYGfxNrCcNwTGYmN3Se8w&oe=62EE7229',
+              child: Image.network('https://scontent.ftnr5-1.fna.fbcdn.net/v/t39.30808-6/253693110_3062379954006882_5114606571690218224_n.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=109&ccb=1-7&_nc_sid=9e2e56&efg=eyJpIjoidCJ9&_nc_eui2=AeGx7XCXJ-Fd0uvKeNV-GaAxgNF6pqtxOx6A0Xqmq3E7Hvyuue61CKeI1fJMa47E3lrAFQCgK95MGCSOQ5SYXFGX&_nc_ohc=DuzXSkE08AcAX_Oq_n-&_nc_ht=scontent.ftnr5-1.fna&oh=00_AT8PPXRz0HKRSEWsB3oC01EKfb5m3UJtAvFnWcIyjAx-pg&oe=630238A9',
                   height: 60,
                   width: 60,
                   fit: BoxFit.cover),
