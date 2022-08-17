@@ -6,7 +6,7 @@ import 'package:kaly/data/data.dart';
 import 'package:kaly/widgets/menu.dart';
 import 'package:kaly/widgets/populaire.dart';
 import 'package:kaly/widgets/search_bar.dart';
-import 'widgets/details.dart';
+import 'widgets/feature_item.dart';
 import 'widgets/les_categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -128,7 +128,7 @@ getBody() {
           SizedBox(height: 10,),
           Container(
             margin: EdgeInsets.only(left: 15, right: 15),
-            child: details(),
+            child: listFeatured(),
           ),
           SizedBox(height: 20,),
         ]
@@ -162,6 +162,14 @@ getBody() {
         child: Row(
           children: List.generate(populars.length, (index) => PopularItem(data: populars[index])
           ),
+        ),
+      );
+  }
+  listFeatured(){
+    return
+      Column(
+        children: List.generate(featured.length,
+                (index) => FeaturedItem(data: featured[index])
         ),
       );
   }

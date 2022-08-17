@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kaly/data/data.dart';
 import 'package:kaly/widgets/favory.dart';
 
-class details extends StatelessWidget {
-  const details({Key? key}) : super(key: key);
+class FeaturedItem extends StatelessWidget {
+  const FeaturedItem({ Key? key, required this.data, this.onTap}) : super(key: key);
+  final data;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class details extends StatelessWidget {
             borderRadius: BorderRadius.circular(10), // Image border
             child: SizedBox.fromSize(
               size: Size.fromRadius(35), // Image radius
-              child: Image.network('https://scontent.ftnr5-1.fna.fbcdn.net/v/t39.30808-6/253693110_3062379954006882_5114606571690218224_n.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=109&ccb=1-7&_nc_sid=9e2e56&efg=eyJpIjoidCJ9&_nc_eui2=AeGx7XCXJ-Fd0uvKeNV-GaAxgNF6pqtxOx6A0Xqmq3E7Hvyuue61CKeI1fJMa47E3lrAFQCgK95MGCSOQ5SYXFGX&_nc_ohc=DuzXSkE08AcAX_Oq_n-&_nc_ht=scontent.ftnr5-1.fna&oh=00_AT8PPXRz0HKRSEWsB3oC01EKfb5m3UJtAvFnWcIyjAx-pg&oe=630238A9',
+              child: Image.network(data["image"],
                   height: 60,
                   width: 60,
                   fit: BoxFit.cover),
@@ -43,21 +45,21 @@ class details extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("Pur jus de canne - SAUVAGE",  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                Text(data["name"],  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
                 SizedBox(height: 5,),
-                Text("55%ALC/VOL", maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey)),
+                Text(data["sources"], maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey)),
                 SizedBox(height: 15,),
                 Row(children: [
                   Icon(Icons.star_rounded, size: 14, color: Colors.orange,),
                   SizedBox(width: 3,),
-                  Text("4.3" "(850)", style: TextStyle(fontSize: 12, color: Colors.orange)),
+                  Text(data["rate"] + " (" + data["rate_number"] + ")", style: TextStyle(fontSize: 12, color: Colors.orange)),
                 ],)
               ],
             ),
           ),
           Column(
             children: <Widget>[
-              Text("Ar 8000",  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.orange)),
+              Text(data["price"],  maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.orange)),
               SizedBox(height: 10,),
               FavoriteBox(iconSize: 17, )
             ],
