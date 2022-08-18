@@ -1,13 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kaly/widgets/app_bar.dart';
+import 'package:kaly/views/details/details.dart';
+import 'package:kaly/views/home/widgets/menu.dart';
+import 'package:kaly/views/home/widgets/app_bar.dart';
 import 'package:kaly/data/data.dart';
-import 'package:kaly/widgets/menu.dart';
-import 'package:kaly/widgets/populaire.dart';
-import 'package:kaly/widgets/search_bar.dart';
-import 'widgets/feature_item.dart';
-import 'widgets/les_categories.dart';
+import 'package:kaly/views/home/widgets/populaire.dart';
+import 'package:kaly/views/home/widgets/search_bar.dart';
+import 'package:kaly/views/home/widgets/feature_item.dart';
+import 'package:kaly/views/home/widgets/les_categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme, // If this is not set, then ThemeData.light().textTheme is used.
         ),
       ),
-      home: HomePage(),
+      home: Details(),
     );
   }
 }

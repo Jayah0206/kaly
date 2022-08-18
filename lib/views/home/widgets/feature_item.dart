@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaly/data/data.dart';
-import 'package:kaly/widgets/favory.dart';
+import 'package:kaly/views/home/widgets/favory.dart';
 
 class FeaturedItem extends StatelessWidget {
   const FeaturedItem({ Key? key, required this.data, this.onTap}) : super(key: key);

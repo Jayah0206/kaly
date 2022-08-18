@@ -12,8 +12,6 @@ class PopularItem extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.only(right: 15),
           height: 250, width: 220,
-
-          // color: secondary,
           child: Stack(
             children: [
               Positioned(
