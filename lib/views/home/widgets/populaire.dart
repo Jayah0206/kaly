@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kaly/data/data.dart';
+import 'package:kaly/views/details/details.dart';
 import 'favory.dart';
 
 class PopularItem extends StatelessWidget {
@@ -16,13 +18,23 @@ class PopularItem extends StatelessWidget {
             children: [
               Positioned(
                 top: 10,
-                child: Container(
-                  height: 220, width: 220,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(data["image"])
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Details(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 220, width: 220,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(data["image"])
+                      ),
                     ),
                   ),
                 ),

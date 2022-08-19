@@ -25,31 +25,30 @@ class _SearchBarState extends State<SearchBar> {
               padding: EdgeInsets.symmetric(horizontal: width/20),
               decoration: BoxDecoration(
                 color: Colors.grey,
-                borderRadius: BorderRadius.circular(99),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: TextField(
-                  maxLines: 1,
-                  decoration: InputDecoration(
-                    fillColor: Colors.transparent,
-                    filled: true,
-                    hintStyle: GoogleFonts.poppins(
-                        color: Colors.black.withOpacity(.4),
-                        fontWeight: FontWeight.w500,
-                        fontSize: 10
-                    ),
-                    prefixIcon: Icon(
-                      Icons.search_outlined, color: Colors.black12.withOpacity(.6),
-                    ),
-                    hintText: 'Search any rum...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(90),
-                        borderSide: BorderSide.none),
-                    contentPadding: EdgeInsets.zero,
-                  )
+                      maxLines: 1,
+                      decoration: InputDecoration(
+                        fillColor: Colors.transparent,
+                        filled: true,
+                        hintStyle: GoogleFonts.poppins(
+                            color: Colors.black.withOpacity(.4),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 10
+                        ),
+                        prefixIcon: Icon(
+                          Icons.search_outlined, color: Colors.black12.withOpacity(.6),
+                        ),
+                        hintText: 'Search any rum...',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(50),
+                            borderSide: BorderSide.none),
+                        contentPadding: EdgeInsets.zero,
+                      )
+                  ),
+              ),
 
-              )
-
-          ),
         ],
       ),
     );

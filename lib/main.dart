@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kaly/views/cart/cart_item.dart';
 import 'package:kaly/views/details/details.dart';
 import 'package:kaly/views/home/widgets/menu.dart';
 import 'package:kaly/views/home/widgets/app_bar.dart';
@@ -10,6 +11,7 @@ import 'package:kaly/views/home/widgets/search_bar.dart';
 import 'package:kaly/views/home/widgets/feature_item.dart';
 import 'package:kaly/views/home/widgets/les_categories.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kaly/views/profile/profile.dart';
 
 
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme, // If this is not set, then ThemeData.light().textTheme is used.
         ),
       ),
-      home: Details(),
+      home: HomePage()
     );
   }
 }
@@ -161,6 +163,7 @@ getBody() {
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.only(left: 15),
         child: Row(
+
           children: List.generate(populars.length, (index) => PopularItem(data: populars[index])
           ),
         ),

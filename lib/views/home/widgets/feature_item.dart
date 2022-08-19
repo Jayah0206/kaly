@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kaly/data/data.dart';
+
 import 'package:kaly/views/home/widgets/favory.dart';
 
 class FeaturedItem extends StatelessWidget {
